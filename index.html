@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Task Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🌤 Daily Task Tracker</h1>
+    <p id="dateTime"></p>
+
+    <div class="task-input">
+      <input type="text" id="taskInput" placeholder="Enter your task..." />
+      <button onclick="addTask()">Add Task</button>
+      <button class="reset" onclick="resetForNewDay()">Reset for New Day</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <div class="progress-container">
+      <div class="progress-bar">
+        <div id="progressFill"><span id="progressText">0%</span></div>
+      </div>
+    </div>
+
+    <div class="chart-container">
+      <h3 class="glow-heading">📊 Weekly Report</h3>
+
+      <div class="chart-controls">
+        <button onclick="prevWeek()">⬅ Prev</button>
+        <span id="weekRange"></span>
+        <button onclick="nextWeek()">Next ➡</button>
+      </div>
+
+      <canvas id="weeklyChart"></canvas>
+      <p id="weeklyAverage">Average: 0%</p>
+
+      <button class="download-btn" onclick="downloadChart()">📥 Download Report</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

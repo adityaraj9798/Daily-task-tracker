@@ -1,0 +1,189 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+  color: white;
+}
+
+.container {
+  width: 420px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.task-input {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.task-input input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  margin-right: 8px;
+}
+
+.task-input button {
+  background: linear-gradient(45deg, #43e97b, #38f9d7);
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.task-input .reset {
+  background: linear-gradient(45deg, #ff0844, #ffb199);
+}
+
+.task-input button:hover {
+  transform: scale(1.05);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  text-align: left;
+}
+
+ul li {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+ul li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.progress-container {
+  margin-top: 20px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+#progressFill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(270deg, #00f260, #0575e6);
+  background-size: 200% 200%;
+  animation: gradientMove 3s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  transition: width 0.5s ease;
+}
+
+#progressText {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.chart-container {
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.glow-heading {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #fff; }
+  to { text-shadow: 0 0 25px #00f5ff, 0 0 50px #0077ff; }
+}
+
+.chart-container:hover {
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+}
+
+.chart-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.chart-controls button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.chart-controls span {
+  font-weight: 500;
+  color: #fff;
+}
+
+#weeklyAverage {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  text-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+
+.download-btn {
+  margin-top: 10px;
+  background: linear-gradient(45deg, #00f260, #0575e6);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  transform: scale(1.05);
+}
+
+canvas {
+  width: 100% !important;
+  height: 300px !important;
+}
